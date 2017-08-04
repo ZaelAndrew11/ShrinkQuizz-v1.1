@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="cl.aguzman.shrinkquizz.MatchFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Cuantos años tienes?"
+        android:layout_marginTop="20dp"
+        android:textSize="22dp"/>
+
+
+    <TextView
+        android:id="@+id/userAge"
+        android:text="0"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"/>
+
+    <SeekBar
+        android:max="120"
+        android:id="@+id/userSb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Cuantos años tiene tu pareja?"
+        android:layout_marginTop="20dp"
+        android:textSize="22dp"/>
+
+    <TextView
+        android:id="@+id/loverAge"
+        android:text="0"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"/>
+
+    <SeekBar
+        android:max="120"
+        android:id="@+id/loverSb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/sendAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:layout_gravity="right"
+        android:layout_marginTop="22dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimary"/>
+
+</LinearLayout>

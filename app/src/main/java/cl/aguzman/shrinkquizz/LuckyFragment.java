@@ -1,6 +1,8 @@
 package cl.aguzman.shrinkquizz;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -47,7 +49,16 @@ public class LuckyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 boolean answer = cbMood.isChecked();
-                Log.d("Answer", String.valueOf(answer));
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("Respuesta");
+                alertDialog.setMessage(new LuckyResult(answer).result());
+                alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                alertDialog.show();
             }
         });
     }

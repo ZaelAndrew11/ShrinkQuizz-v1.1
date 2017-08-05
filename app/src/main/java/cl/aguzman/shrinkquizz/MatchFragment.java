@@ -1,6 +1,8 @@
 package cl.aguzman.shrinkquizz;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -79,6 +81,17 @@ public class MatchFragment extends Fragment {
             public void onClick(View v) {
                 int user = userSeekbar.getProgress();
                 int lover = loverSeekBar.getProgress();
+
+                AlertDialog.Builder  alertDialog = new AlertDialog.Builder(getActivity());
+                alertDialog.setTitle("Compatibilidad");
+                alertDialog.setMessage(new MatchResult(user, lover).resultCompatibility());
+                alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+                alertDialog.show();
             }
         });
 

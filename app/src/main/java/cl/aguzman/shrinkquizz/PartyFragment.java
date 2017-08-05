@@ -54,7 +54,7 @@ public class PartyFragment extends Fragment {
     }
 
     private void showDialog(String answer) {
-        final AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
         alertDialog.setTitle("Consejo:");
         alertDialog.setMessage(new PartyResult(answer).result());
         alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
